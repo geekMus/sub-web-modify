@@ -195,18 +195,6 @@
           <path d="M8.9 18.8c-3.5 1.1-6-1.4-6-1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
         </svg>
       </button>
-      <button class="subconverter-social-btn" type="button" @click="gotoTgChannel" aria-label="Telegram" title="Telegram">
-        <svg viewBox="0 0 24 24" fill="none" class="subconverter-social-btn__icon" aria-hidden="true">
-          <path d="M21 4.5 3.8 11.2c-.8.3-.8 1.4 0 1.6l4.1 1.4 1.6 5c.2.8 1.2 1 1.7.4l2.4-2.7 4.2 3.1c.7.5 1.7.1 1.9-.8L22 5.8c.2-.9-.5-1.7-1.4-1.3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-          <path d="m8 14 9.1-6.7M9.5 18.5 11 14l7.6-6.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="subconverter-social-btn" type="button" @click="gotoYouTuBe" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24" fill="none" class="subconverter-social-btn__icon" aria-hidden="true">
-          <rect x="3.5" y="6" width="17" height="12" rx="4.2" stroke="currentColor" stroke-width="1.7"/>
-          <path d="m10 9.4 5.5 2.7-5.5 2.7V9.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-        </svg>
-      </button>
       <button class="subconverter-social-btn subconverter-social-btn--theme" type="button" @click="change" aria-label="切换主题">
         <i id="rijian" class="el-icon-sunny subconverter-theme-toggle-icon"></i>
         <i id="yejian" class="el-icon-moon subconverter-theme-toggle-icon"></i>
@@ -308,8 +296,6 @@ const shortUrlBackend = process.env.VUE_APP_MYURLS_DEFAULT_BACKEND + '/short'
 const configUploadBackend = process.env.VUE_APP_CONFIG_UPLOAD_BACKEND + '/sub.php'
 const basicVideo = process.env.VUE_APP_BASIC_VIDEO
 const advancedVideo = process.env.VUE_APP_ADVANCED_VIDEO
-const tgBotLink = process.env.VUE_APP_BOT_LINK
-const yglink = process.env.VUE_APP_YOUTUBE_LINK
 const bzlink = process.env.VUE_APP_BILIBILI_LINK
 export default {
   data() {
@@ -837,7 +823,6 @@ export default {
       uploadFilter: "",
       uploadScript: "",
       uploadConfig: "",
-      myBot: tgBotLink,
       filterConfig: filterConfigSample,
       scriptConfig: scriptConfigSample,
       sampleConfig: remoteConfigSample
@@ -924,14 +909,8 @@ export default {
     goToProject() {
       window.open(project);
     },
-    gotoTgChannel() {
-      window.open(tgBotLink);
-    },
     gotoBiliBili() {
       window.open(bzlink);
-    },
-    gotoYouTuBe() {
-      window.open(yglink);
     },
     gotoBasicVideo() {
       this.$alert("别忘了关注友善的肥羊哦！", {
