@@ -331,7 +331,6 @@ export default {
         shortTypes: {
           "v1.mk": "https://v1.mk/short",
           "d1.mk": "https://d1.mk/short",
-          "dlj.tf": "https://dlj.tf/short",
         },
         customBackend: {
           "Mus提供-通用后端": "https://subapi.mus.pp.ua",
