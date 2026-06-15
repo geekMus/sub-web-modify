@@ -370,6 +370,15 @@ export default {
             ]
           },
           {
+            label: "usbog232",
+            options: [
+              {
+                label: "usbog232 应用层增加单节点手动和自动选择",
+                value: "https://raw.githubusercontent.com/usbog232/clashmetadingyue/main/new-meta.ini"
+              },
+            ]
+          },
+          {
             label: "通用",
             options: [
               {
